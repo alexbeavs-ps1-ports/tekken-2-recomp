@@ -1,0 +1,98 @@
+{
+  "format_version": 1,
+  "id": "tekken-2-psx",
+  "name": "Tekken 2",
+  "kind": "recomp",
+  "platform": "psx",
+  "source_repo": "tekken-2-recomp",
+  "rom_identity": {
+    "crc32": [
+      "c3c198c8"
+    ],
+    "md5": [
+      "a707b8f7d66dfd2b4454bf13fe97dc88"
+    ],
+    "sha1": [
+      "31fb932cabff950784b6e0a8d3b0f5d1c3922187"
+    ],
+    "disc_serials": [
+      "SLUS-00213"
+    ],
+    "sizes": [
+      717922128
+    ],
+    "filenames": [
+      "Tekken 2 (USA).cue",
+      "Tekken 2 (USA) (Track 1).bin"
+    ],
+    "track_counts": [
+      3
+    ],
+    "disc_fps": [
+      "e9e132800fa8cd648cc6ba15ed87e835f5cf94b551f27006a22820dfd33dfe92"
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin",
+    ".chd"
+  ],
+  "bios_identity": {
+    "required": true,
+    "name": "SCPH1001.BIN",
+    "profile": "SCPH1001",
+    "crc32": [
+      "37157331"
+    ],
+    "md5": [
+      "924e392ed05558ffdb115408c263dccf"
+    ],
+    "sha1": [
+      "10155d8d6e6e832d6ea66db9bc098321fb5e8ebf"
+    ],
+    "sha256": [
+      "71af94d1e47a68c11e8fdb9f8368040601514a42a5a399cda48c7d3bff1e99d3"
+    ],
+    "sizes": [
+      524288
+    ],
+    "filenames": [
+      "SCPH1001.BIN"
+    ]
+  },
+  "release": {
+    "github": "alexbeavs-ps1-ports/tekken-2-recomp",
+    "allow_prerelease": false,
+    "asset_glob": {
+      "windows-x64": "tekken-2-*-windows-x64.zip",
+      "linux-x64": "tekken-2-*-linux-x64.zip",
+      "macos-arm64": "tekken-2-*-macos-arm64.zip",
+      "macos-x64": "tekken-2-*-macos-x64.zip"
+    }
+  },
+  "launch": {
+    "windows": "tekken_2.exe",
+    "linux": "tekken_2",
+    "macos": "tekken_2"
+  },
+  "build": {
+    "source": {
+      "github": "alexbeavs-ps1-ports/tekken-2-recomp",
+      "ref": ""
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "min_version": "1.0.14"
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}
